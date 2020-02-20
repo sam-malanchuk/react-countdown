@@ -5,17 +5,22 @@ class Counter extends React.Component {
         super(props);
 
         this.state = {
-            counter: 0,
+            counter: 4,
+        }
+
+        this.updateCounter = () => {
+            if(this.state.counter > 1) {
+                this.setState({counter: this.state.counter - 1})
+            } else {
+                this.setState({counter: 'Complete!'})
+            }
         }
     }
 
     render() {
         return (
-            <div>
-            Counter:
-                <div>
-                    {this.state.counter}
-                </div>
+            <div onClick={this.updateCounter}>
+                {this.state.counter}
             </div>
         )
     }
