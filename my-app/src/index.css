@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.counterBox {
+  color: #282c34;
+  font-size: 5em;
+  display: inline-block;
+  padding: 50px;
+  line-height: 5rem;
+  border-radius: 50%;
+  background-color: white;
+  user-select: none;
+  cursor: pointer;
+}

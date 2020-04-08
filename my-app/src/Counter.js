@@ -12,14 +12,14 @@ class Counter extends React.Component {
             if(this.state.counter > 1) {
                 this.setState({counter: this.state.counter - 1})
             } else {
-                this.setState({counter: 'Complete!'})
+                this.setState({counter: 0})
             }
         }
     }
 
     render() {
         return (
-            <div onClick={this.updateCounter}>
+            <div className="counterBox" onClick={this.updateCounter}>
                 {this.state.counter}
             </div>
         )
