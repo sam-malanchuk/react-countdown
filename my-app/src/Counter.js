@@ -21,6 +21,16 @@ class Counter extends React.Component {
 
         // Set the counter back to the setCounter value
         this.resetCounter = () => this.setState({counter: this.state.setCounter});
+
+        this.setCounterMore = () => this.setState({setCounter: this.state.setCounter + 1});
+        this.setCounterLess = () => {
+            if(this.state.setCounter > 1) {
+                this.setState({setCounter: this.state.setCounter - 1})
+            // if the counter is already at zero then keep it there
+            } else {
+                this.setState({setCounter: 0})
+            }
+        }
     }
 
     render() {
@@ -31,6 +41,13 @@ class Counter extends React.Component {
                 </div>
                 <div>
                     <button onClick={this.resetCounter}>Reset Counter</button>
+                </div>
+                <div>
+                    Set Counter: {this.state.setCounter}
+                    <div>
+                        <button onClick={this.setCounterMore}>+ more</button>
+                        <button onClick={this.setCounterLess}>- less</button>
+                    </div>
                 </div>
             </div>
         )
