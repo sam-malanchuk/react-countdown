@@ -23,3 +23,7 @@ code {
   user-select: none;
   cursor: pointer;
 }
+
+.counterBox.complete {
+  background-color: limegreen;
+}

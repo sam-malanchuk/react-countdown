@@ -5,8 +5,8 @@ class Counter extends React.Component {
         super(props);
 
         this.state = {
-            setCounter: 0,
-            counter: 4,
+            setCounter: 8,
+            counter: 8,
         }
 
         // minus one every time the counter is clicked
@@ -22,7 +22,9 @@ class Counter extends React.Component {
         // Set the counter back to the setCounter value
         this.resetCounter = () => this.setState({counter: this.state.setCounter});
 
+        // allows you to set the setCounter value by increase using the more button
         this.setCounterMore = () => this.setState({setCounter: this.state.setCounter + 1});
+        // allows you to set the setCounter value by decrease using the less button
         this.setCounterLess = () => {
             if(this.state.setCounter > 1) {
                 this.setState({setCounter: this.state.setCounter - 1})
@@ -36,7 +38,7 @@ class Counter extends React.Component {
     render() {
         return (
             <div>
-                <div className="counterBox" onClick={this.updateCounter}>
+                <div className={this.state.counter === 0 ? "counterBox complete" : "counterBox"} onClick={this.updateCounter}>
                     {this.state.counter}
                 </div>
                 <div>
