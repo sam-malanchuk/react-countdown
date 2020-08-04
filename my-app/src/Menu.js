@@ -1,10 +1,13 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+  
 function Menu() {
     return (
         <div>
             <p>Welcome to the React Click Countdown</p>
-            <button>Start</button>
+            <Link to="/counter">
+                <button>Start</button>
+            </Link>
         </div>
     )
 }

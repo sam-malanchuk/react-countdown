@@ -9,9 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Route path="/" exact><Menu /></Route>
-        <Route path="/couter">
-          <Counter />
-        </Route>
+        <Route path="/counter"><Counter /></Route>
       </header>
     </div>
   );
