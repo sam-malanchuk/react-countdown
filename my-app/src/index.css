@@ -27,3 +27,22 @@ code {
 .counterBox.complete {
   background-color: limegreen;
 }
+
+button.menu-btn {
+  border: #fff 1px solid;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 2em;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+button {
+  border: #fff 1px solid;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 1.5em;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 15px;
+}
